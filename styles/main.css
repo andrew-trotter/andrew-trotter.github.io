@@ -1,5 +1,6 @@
 :root{
   --imag-card-max-width: 200px;
+  --sunset-yellow: rgb(255, 187, 0);
 }
 
 body{
@@ -79,6 +80,12 @@ main{
   margin: auto;
 }
 
+main h1 {
+  text-align: center;
+}
+
+
+
 .blog-box {
   width: 100%;  
   min-width:min-content;
@@ -87,7 +94,7 @@ main{
   padding: 1px 10px;
   margin: 15px 0px;
   border-radius: 15px;
-  box-shadow: 0px 0px 7px 3px rgb(255, 187, 0);
+  box-shadow: 0px 0px 7px 3px var(--sunset-yellow);
 }
 
 .blog-box h1:first-child{
@@ -128,6 +135,26 @@ main{
 
 .blog-box-text {
   padding-right: 20px;
+}
+
+.blog-list {
+  list-style-type: none;
+  padding-right: 40px;
+}
+
+.blog-list li {
+  border: 0px;
+  border-bottom: 1px;
+  border-color: var(--sunset-yellow);
+  border-style: solid;
+}
+
+.blog-list li:last-child {
+  border: 0px;
+}
+
+.blog-list h3 {
+  margin-bottom: 0px;
 }
 
 /* Responsive Rules */
