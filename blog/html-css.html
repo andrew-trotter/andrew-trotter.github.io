@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css" type="text/css">
-    <title>Identity & Values</title>
+    <title>Class vs ID</title>
   </head>
   <body>
     <header>
@@ -18,24 +18,60 @@
       </nav>
     </header>
     <main>
-      <h1>HTML/CSS - What are the best practices associated with using classes vs. ids?</h1>
-      <!-- <aside class="sidebar-left">
-        <h2>Table of Contents</h2>        
-      </aside> -->
-<!-- Blog post starts -->
-      <section class="blog-box">
-        <h3>What are they?</h3>
-        <p>They are two types selectors used in CSS to apply styling rules to elements in HTML. 
-          There are more selectors, and together they help to provide design consistency throughout
-           a website. </p>
-      </section>
-      <section class="blog-box">
-        <h3>What is an ID</h3>
-        <p>I was in my early 20's and had somewhat recently completed a course in first aid and had been walking in town with a friend and witnessed an accident between a motorbike and a car. There were pieces all over the road, people starting to get over and help out. With my knowledge of first aid I wanted to help to so I started heading over to do what I could. It dawned on me that I couldn't recall how to do first aid and I wasn't confident I could do it well. I felt torn as I had this certificate but not the ability to do it. What if he had a neck injury and I moved him improperly. I was worried I might be the only one with the knowledge and that I couldn't do it. Thankfully it looked like people were already tending motorcyclist so I felt okay just moving the debris off the road to help motorists and headed off.</p>
-        <p>I had to weigh up whether I would do more harm than good, whether I trusted my ability when in the moment. I still wanted to help, but I didn't want to do harm. In reality I didn't trust myself enough with handling the person, but did what I could manage in the surrounding area.</p>
-        <p>I look back and think it was the right decision given what was happening. He was being handled, I wasn't confident and in the end I did what I could. I think it's a shame that despite completing the first aid course I still didn't feel competent in the situation.</p>
-      </section>
-      
+      <article>
+        <h1>HTML/CSS - What are the best practices associated with using classes vs. ids?</h1>
+        <!-- <aside class="sidebar-left">
+          <h2>Table of Contents</h2>        
+        </aside> -->
+  <!-- Blog post starts -->
+        <section class="blog-box">
+          <h3>What are they?</h3>
+          <p>They are two types of selectors used in CSS to apply styling rules to elements in HTML. 
+            There are more selectors, and together they help to provide design consistency throughout
+            a website.</p>            
+            <h3>Specificity</h3>
+            <p>Just briefly, Specificity is a scoring system used to determine the hierarchy of which CSS rules are determined 
+              when targeting the same HTML tag. By default, higher rules will be overridden by rules declared lower down 
+              unless a rule with a higher specificity is declared. </p>
+              <p>The hierarchy stands as follows: <br>
+              Important! > inline > <span id="text-red">id</span> > <span class="text-blue">class</span> > element</p>
+              <p>So between Class and ID, ID is a higher priority when CSS rules are being selected.</p>
+        </section>        
+        <section class="blog-box">
+          <h3>What is a Class?</h3>
+          <p>The class selector identifies all elements with the same class name attribute and applies CSS rules to them. 
+            Widely used on divs to make this container tag more specific, but very commonly used on most elements too.</p>
+            HTML: <pre><code>&lt;p <strong>class=&quot;text-blue&quot;</strong>&gt; I'm a red because I used the ID &lt;/p&gt;</code></pre><br>
+              CSS: <pre><code>.text-blue{color: blue;}</code></pre>
+              <p class="text-blue">I'm a blue instead of white because I used the class selector</p>
+        </section>
+        <section class="blog-box">
+          <h3>What is an ID?</h3>
+          <p>An ID is a selector that is used by developers to target or identify a specific element. In fact, each element can only 
+            have one ID. If an element is given two ID's, it won't respect any ID ruling. ID's are noted 
+            This is useful because you can apply styling to just one element and it won't be affected by other class declarations. </p>
+            HTML: <pre><code>&lt;p class=&quot;text-blue&quot; <strong>id=&quot;text-red&quot;</strong>&gt; I'm a red because I used the ID &lt;/p&gt;</code></pre><br>
+            CSS: <pre>#blog-box-red {background-color: red;}</pre>
+            <p class="text-blue" id="text-red">I'm a red because I used the ID</p>
+        </section>
+        <section class="blog-box">
+          <h3>What's the difference?</h3>
+          <p> Consider it like this. A school is your HTML page, <span class="text-blue">classrooms</span> in a school are your classes, and the <span id="text-red">names</span> of 
+              children or staff in each classroom are the IDs. The class <span class="text-blue">Room 4</span> has an allocated time in the gym before it's <span class="text-blue">Room 5's</span> turn.
+              But a student, <span id="text-red">Tim Buckland</span>, is needed in the Principal's office. The <span class="text-blue">class</span> goes to the gym, but <span id="text-red">Tim</span> goes to the principal's 
+              office because he specifically has been called, so it overrides his need to go to the gym. A <span class="text-blue">class</span> identifies a selection 
+              of elements with the class name and an ID is specific and identifies one element.</p>
+        </section>
+        <section class="blog-box">
+          <h3>In Summary</h3>
+          <p>
+            It is best practice to use an ID once per page to preserve it's use and identify elements specifically. 
+            If more than one element must be selected, take advantage of the cascading nature of CSS and declare a 
+            class underneath other classes.</p>
+            <p><em>It should be noted that an ID can be used more than once on a page, despite my research indicating it couldn't.</em>
+          </p>
+        </section>
+      </article>
     </main>
     <footer>
 

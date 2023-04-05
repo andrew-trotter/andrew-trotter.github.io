@@ -209,3 +209,16 @@ main h1 {
   text-align: center;
   padding: 10px 20px;
 }
+
+.text-blue{
+  color: rgb(72, 192, 240);
+
+}
+
+#text-red {
+  color: rgb(255, 53, 53);
+}
+
+#blog-box-blue {
+  background-color: blue;
+}
