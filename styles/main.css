@@ -7,6 +7,7 @@ body{
   background-color: rgb(0, 0, 0);
   color: white;
   font-family: 'Roboto', sans-serif;
+  margin: 0px;
   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
@@ -27,12 +28,14 @@ header {
 } */
 
 .navbar{
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   /* align-items: stretch; */
   width: 100%;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.368);
+  background-color: rgba(0, 0, 0, 0.8);
   margin: 0px;
   padding: 0px;
   list-style-type: none;
@@ -49,7 +52,7 @@ nav a{
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
   color: white;
-  border-color: rgba(0, 0, 0, 0.368);
+  border-color: rgba(0, 0, 0, 0.95);
   border-style: none;
   border-right-style: solid;
   border-width: 1px;
@@ -58,7 +61,7 @@ nav a{
 }
 
 .nav-item:hover{
-  background-color: rgba(39, 91, 124, 0.144);
+  background-color: rgba(0, 0, 0, 0.642);
 }
 
 .nav-item-left {
@@ -88,7 +91,9 @@ main h1 {
 
 .blog-box {
   width: 100%;  
-  min-width:min-content;
+  display: flex;
+  flex-direction: column;
+  min-width: 210px;
   align-self: center;
   background-color: rgba(36, 36, 36, 0.804);
   padding: 1px 10px;
@@ -116,11 +121,20 @@ main h1 {
   max-width: var(--imag-card-max-width);
 }
 
+.sml-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;  
+  justify-content: space-evenly;
+}
+
 .blog-box-sml {
   min-width: min-content;
   align-self: center;
   width: 33vw;
-  flex-grow: 1;
+  margin-inline: 10px;
+  
 }
 
 .blog-box a {
@@ -129,7 +143,7 @@ main h1 {
 }
 
 .blog-box-w-img {
-  display: flex;
+  flex-direction: row;
   align-items: center;
   }
 
@@ -157,11 +171,24 @@ main h1 {
   margin-bottom: 0px;
 }
 
+
+
 /* Responsive Rules */
 
 @media screen and (min-width: 800px){
   .blog-box {width: 100%;}
+  .sml-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
+}
+
+/* img card wrap down */
+@media screen and (max-width: 600px){
+  .blog-box-w-img {
+    flex-direction: column;
+  }
 }
 
 /* Image Card */
@@ -173,6 +200,8 @@ main h1 {
   box-shadow: 0 0 7px 3px rgb(0, 0, 0);
   margin-bottom: 10px;
   border-radius: 15px;
+  margin-block: 10px;
+  
 }
 
 .img-card-text{
