@@ -1,12 +1,15 @@
 :root{
   --imag-card-max-width: 200px;
   --sunset-yellow: rgb(255, 187, 0);
+  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
   background-color: rgb(0, 0, 0);
   color: white;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  
   margin: 0px;
 }
 
@@ -21,6 +24,32 @@ header {
   
   height: 300px;
   }
+
+.header-container{
+  position: relative;
+  text-align: center;
+  height: 300px;
+  width: 100%;
+  background-color: rgba(88, 88, 88, 0.267);
+}
+
+.header-text {  
+  color: black;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: ;
+
+ /* transform: translate(-50%, -50%) */
+}
+ 
+/* Nav */
 
 .navbar{
   position: fixed;
@@ -68,6 +97,9 @@ nav a{
 
 /* Responsive Rules */
 
+@media screen and () {
+  
+}
 
 /* Content */
 
@@ -184,6 +216,7 @@ main h1 {
 }
 
 /* img card wrap down */
+
 @media screen and (max-width: 600px){
   .blog-box-w-img {
     flex-direction: column;
