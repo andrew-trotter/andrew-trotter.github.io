@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Javascript and the DOM</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-text">Andrew's Space</div>
+      </div>  
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item"><a href="/blog/blog.html">Blogs</a></li>
+        </ul>
+        <ul>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>      
+      <h1>Javascript and the DOM</h1>
+      <!-- <aside class="sidebar-left">
+        <h2>Table of Contents</h2>        
+      </aside> -->
+<!-- Blog post starts -->
+      <section class="blog-box">
+        <h3>What is Javascript?</h3>
+        <p>
+          If HTML is the content and structure, and CSS is how it all looks, then JavaScript is everything else. It handles how the viewer interacts with the webpage, what happens with information, any updates or responses to things happening. 
+        </p>
+        <p>
+          Let's look at a game of Uno. <br>
+          HTML would be the all the cards, hands, the discard and draw pile. <br>
+          CSS is how everything looks, the colours on the cards, how big they are, the fonts of the numbers and style. <br>
+          JavaScript would be the actions. It would keep track of where the cards are, how many are in each hand, turn order, order of play, how many someone has to pick up, check whether the card you've played is valid, it could sort the cards in your hand, pick up the card, pass the turn to someone else and all sorts.
+        </p>
+        <h3>What is control flow and what are loops?</h3>
+        <p>JavaScript acts as a series of instructions that typically starts from the top and runs through to the bottom. This act is known as control flow. The control flow can be altered or interrupted if something happens. For example, let's say you're making your favourite sandwich. Lettuce, tomato, cucumber, chutney, ham and cheese. You have an order to the way you make that sandwich. </p>
+        <p>When placing the cucumbers on your sandwich, you could pick up each slice one by one, but that would be slow. Instead, you could use a loop and pick each of them up into your hand, and then loop again and place each one from your hand to the sandwich. The efficiency here is gained in not moving your hands back and forth so many times. Instead, you pick them all up, move to the sandwich, then place them all. Done!</p>
+        <h3>What is the DOM?</h3> 
+          <div class="img-container">
+            <div class="img-card">
+              <img src="../imgs/dom-template.png" alt="DOM Tree">
+              <div class="img-card-text">The DOM Tree</div>
+            </div>
+          </div>
+        
+        <p>
+          When a web browser shows you a web page, it's showing a browser's interpretation of the HTML, CSS and JavaScript code. The browser reads that code and builds the Document Object Model (DOM) as a blueprint of the website and uses that to show users the website. If we used TradeMe as an example, you might be looking at the photos of a listing, clicking through them to see them all. Each time you click to see the next photo, when you click and see the photo change, that's JavaScript using the DOM to show the next picture. 
+        </p> 
+        <h3>What's the difference between arrays and objects?</h3>
+        <div class="img-container">
+          <div class="img-card">
+            <img src="https://www.guru99.com/images/1/102319_0559_ArrayinData1.png" alt="image of array structure">
+            <div class="img-card-text">The structure of an array</div>
+          </div>
+          <div class="img-card">
+            <img src="../imgs/small_red_open_toolbox_with_compartments_inside.png" alt="image of array structure">
+            <div class="img-card-text">Toolbox object example</div>
+          </div>
+        </div>
+        <p>
+          Similarly, they are both ways of organising information. They differ, by how they organise data. 
+        </p>
+          <table class="table">
+            <tr>
+              <th>Explanation</th>
+              <th>Code</th>
+            </tr>
+            <tr>
+              <td>An array is like a queue at the supermarket and an object is like a tool box. In an array, the items are ordered in a line, one by one, and you count through the line to find its position. Just like in a queue, you're waiting in line and your line number is represented by an index. <br></td>
+              <td>  <pre><code>order: [
+  "whiteCoffee", 
+  "blackCoffee", 
+  "hotChocolate" 
+]
+              </code></pre> </td>
+            </tr>
+            <tr>
+              <td>In an object, the items are in different compartments like screws or sockets in the top and the hammer is below. To get the hammer, you need to open the box, access the bottom and identify the hammer.</td>
+              <td><pre><code>order: let products = {
+  whiteCoffee: {
+    name: 'whiteCoffee',
+    stock: 4,
+    price: 4,
+  },
+  blackCoffee: {
+    name: 'blackCoffee',
+    stock: 7,
+    price: 3.5,
+  }
+}
+              </code></pre></td>
+            </tr>
+          </table>
+        <h3>What are functions?</h3>
+        <p>
+          A function is like a script or procedure you follow for a specific task, like filling up the sink before washing the dishes. When you run the function "fillSink()" you turn on the hot tap and wait till it's hot, next you put in the plug. As it's filling you squeeze in some dishwashing liquid. <br>
+          Functions are helpful, because you don't want to rewrite the procedure every time you want to perform the exact series of instructions. Also, if someone else wants to help with the dishes, the procedure for filling the sink is already written, so they can follow the same one.
+        </p>
+        <p>Using the cafe javascript codealong challenge as an example:</p>
+        <p>A simple function, but this function uses other in-built functions in the function we're functioning. <br>
+          We needed a way to display the cost of an order on screen. This <span class="text-yellow">displayCash()</span> function grabs the div tag with the ID "cash" using the <span class="text-yellow">getElementById</span> function and updates the text which is accessed by the <span class="text-green">inner.HTML</span> property.</td></p>
+        <pre class="center-text wrap-text"><code>
+function <span class="text-yellow">displayCash()</span> {
+  document.<span class="text-yellow">getElementById('cash')</span>.<span class="text-green">innerHTML</span> = 'Cash: ' + cash
+}
+                </code>
+              </pre></td>
+          
+      </section>   
+    </main>
+    <footer>
+
+    </footer>      
+  </body>
+</html>
