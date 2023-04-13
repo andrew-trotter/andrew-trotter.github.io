@@ -268,6 +268,18 @@ table pre {
   white-space:break-spaces
 }
 
+.grid-table {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-auto-rows:1fr;  
+  justify-items: center;
+  align-items: center;
+}
+
+.table-box{  
+  display: grid;  
+}
+
 /* Image Card */
 
 .img-card {
@@ -303,5 +315,9 @@ table pre {
   .blog-box-w-img {
     flex-direction: column;
   }
+  .grid-table {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    }
 }
 

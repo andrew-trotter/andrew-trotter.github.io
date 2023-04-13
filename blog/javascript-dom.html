@@ -43,7 +43,7 @@
           JavaScript would be the actions. It would keep track of where the cards are, how many are in each hand, turn order, order of play, how many someone has to pick up, check whether the card you've played is valid, it could sort the cards in your hand, pick up the card, pass the turn to someone else and all sorts.
         </p>
         <h3>What is control flow and what are loops?</h3>
-        <p>JavaScript acts as a series of instructions that typically starts from the top and runs through to the bottom. This act is known as control flow. The control flow can be altered or interrupted if something happens. For example, let's say you're making your favourite sandwich. Lettuce, tomato, cucumber, chutney, ham and cheese. You have an order to the way you make that sandwich. </p>
+        <p>JavaScript is read as a series of instructions that typically starts from the top and runs through to the bottom. This order of reading is known as control flow. The control flow can be altered or interrupted if something happens. For example, let's say you're making your favourite sandwich. Lettuce, tomato, cucumber, chutney, ham and cheese. You have an order to the way you make that sandwich. </p>
         <p>When placing the cucumbers on your sandwich, you could pick up each slice one by one, but that would be slow. Instead, you could use a loop and pick each of them up into your hand, and then loop again and place each one from your hand to the sandwich. The efficiency here is gained in not moving your hands back and forth so many times. Instead, you pick them all up, move to the sandwich, then place them all. Done!</p>
         <h3>What is the DOM?</h3> 
           <div class="img-container">
@@ -51,8 +51,7 @@
               <img src="../imgs/dom-template.png" alt="DOM Tree">
               <div class="img-card-text">The DOM Tree</div>
             </div>
-          </div>
-        
+          </div>        
         <p>
           When a web browser shows you a web page, it's showing a browser's interpretation of the HTML, CSS and JavaScript code. The browser reads that code and builds the Document Object Model (DOM) as a blueprint of the website and uses that to show users the website. If we used TradeMe as an example, you might be looking at the photos of a listing, clicking through them to see them all. Each time you click to see the next photo, when you click and see the photo change, that's JavaScript using the DOM to show the next picture. 
         </p> 
@@ -70,19 +69,33 @@
         <p>
           Similarly, they are both ways of organising information. They differ, by how they organise data. 
         </p>
-          <table class="table">
+
+        <div class="grid-table">
+          <div class="table-box">An array is like a queue at the supermarket and an object is like a tool box. In an array, the items are ordered in a line, one by one, and you count through the line to find its position. Just like in a queue, you're waiting in line and your line number is represented by an index.</div>
+          <div class="table-box"><pre><code>order: [
+  "whiteCoffee", 
+  "blackCoffee", 
+  "hotChocolate" 
+]</code></pre></div>
+          <div class="table-box">In an object, the items are in different compartments like screws or sockets in the top and the hammer is below. To get the hammer, you need to open the box, access the bottom and identify the hammer.</div>
+          <div class="table-box"><pre><code>order: [
+  "whiteCoffee", 
+  "blackCoffee", 
+  "hotChocolate" 
+]</code></pre></div>
+        </div>
+          <!-- <table class="table">
             <tr>
               <th>Explanation</th>
               <th>Code</th>
             </tr>
             <tr>
-              <td>An array is like a queue at the supermarket and an object is like a tool box. In an array, the items are ordered in a line, one by one, and you count through the line to find its position. Just like in a queue, you're waiting in line and your line number is represented by an index. <br></td>
+              <td>An array is like a queue at the supermarket and an object is like a tool box. In an array, the items are ordered in a line, one by one, and you count through the line to find its position. Just like in a queue, you're waiting in line and your line number is represented by an index.</td>
               <td>  <pre><code>order: [
   "whiteCoffee", 
   "blackCoffee", 
   "hotChocolate" 
-]
-              </code></pre> </td>
+]</code></pre> </td>
             </tr>
             <tr>
               <td>In an object, the items are in different compartments like screws or sockets in the top and the hammer is below. To get the hammer, you need to open the box, access the bottom and identify the hammer.</td>
@@ -100,7 +113,7 @@
 }
               </code></pre></td>
             </tr>
-          </table>
+          </table> -->
         <h3>What are functions?</h3>
         <p>
           A function is like a script or procedure you follow for a specific task, like filling up the sink before washing the dishes. When you run the function "fillSink()" you turn on the hot tap and wait till it's hot, next you put in the plug. As it's filling you squeeze in some dishwashing liquid. <br>
