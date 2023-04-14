@@ -321,3 +321,8 @@ table pre {
     }
 }
 
+@media screen and (min-width: 1440px) {
+  .blog-box {
+    width: 80rem;
+  }
+}
