@@ -98,6 +98,9 @@ nav a{
 .blog-box h3 {
   margin-bottom: 10px;
 }
+.blog-box p {
+  padding-inline: 10px;
+}
 
 .center-text {
   margin-inline: auto;
@@ -274,6 +277,7 @@ table pre {
   grid-auto-rows:1fr;  
   justify-items: center;
   align-items: center;
+  padding-inline: 10px;
 }
 
 .table-box{  
@@ -288,8 +292,12 @@ table pre {
   box-shadow: 0 0 7px 3px rgb(0, 0, 0);
   margin-bottom: 10px;
   border-radius: 15px;
-  margin-block: 10px;  
-  
+  margin-block: 10px;    
+}
+
+.img-med {
+  max-width: 50vw;
+  align-self: center;
 }
 
 /* Content Responsive Rules */
