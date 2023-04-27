@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>JS Methods</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-text">Andrew's Space</div>
+      </div>  
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item"><a href="/blog/blog.html">Blogs</a></li>
+        </ul>
+        <ul>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      
+        <h1 class="center-text">JavaScript Methods I've Looked</h1>
+        <!-- <aside class="sidebar-left">
+          <h2>Table of Contents</h2>        
+        </aside> -->
+  <!-- Blog post starts -->
+        <section class="blog-box">
+          <h3>What is this?</h3>
+          <p>This is an exploration of some JavaScript methods I've done during my time at Dev Academy. I chose to look more into the .map(), .join() and Number methods. I chose these because they seemed powerful and I didn't understand them well at the beginning, so I went a bit deeper to learn more about them.</p>  
+          </section>               
+        <section class="blog-box">
+          <h3>What is the .map() method</h3>
+          <p>The .map() method allows us  to call a function on every item in the given array. It will output as a new array and doesn't alter the original array. It functions like a for loop that outputs a new array. Here's an example of how it functions under the hood:</p>
+          <pre><code>// Array of students:
+let students = ['Andrew', 'Adam', 'Jane', 'Sarah', 'Valentine']
+// Custom Map function:
+function customMap(arr, func) {
+  let newArr = [] // empty array to push new stuff into
+  for (let i = 0; i < arr.length; i++) {
+    let item = arr[i]
+    newArr.push(func(item)) // calling the "func" function on the array item
+  }
+  return newArr // returning new "mapped" array
+}
+// calling our customMap function:
+let mappedArr = customMap(students, (name) => {
+  return {
+    name: name,
+  }
+})
+
+console.log(mappedArr)
+  // Should return: {
+    name: 'Andrew',
+    name: 'Adam',
+    name: 'Jane',
+    name: 'Sarah',
+    name: 'Valentine',}</code></pre><p>
+          The customMap function has two parameters. "arr" which is the array to work with, and "func" which is the operation to perform on the array. <br>
+          It makes a new array and in a for loop, makes an item and pushes the result of the item from the function to the new array. Then, it returns a new array with the results of the function. In this case we call it to make a student object.
+          </p>
+          <p> In the example below I have an array of numbers I want to square. This example uses an inline arrow function to  <br>          
+            </p>
+          <pre><code>let numbers = [1, 2, 3, 4, 5]
+
+function squareNumbers(array) {
+  let squaredNumbers = array.map((number) => number ** 2)
+  return squaredNumbers
+}
+console.log(squaredNumbers(numbers))
+
+OR
+
+console.log(numbers.map((number) => number ** 2))
+// Expected output: [1, 4, 9, 16, 25]</code></pre><p></p>
+
+        </section>
+        <section class="blog-box">
+          <h3>What is the .join() method?</h3>
+          <p>This method allows you to concatenate all elements in an array and output as a string.
+            You're able to use a parameter to put in between each element when output as a string.</p>
+            <p>In this example, we have an array of users with names stored as separate elements that I would like to make user names for. The usernames will have a hyphen (-) between the first and last name.</p>
+            <p>Example: <code>generateUserNames([[`Margaret`, `Phillips`], [`Andy`, `Johnson`], [`Sarah`, `Conner`]])</code></p>
+            <pre><code>let people = [
+  [`Margaret`, `Phillips`],
+  [`Andy`, `Johnson`],
+  [`Sarah`, `Conner`],
+]
+
+function generateUserNames(array) {
+  let userNames = array.map((person) => person.join(`-`))
+  return userNames
+}
+
+console.log(generateUserNames(people))
+// Should return: ['Margaret-Phillips', 'Andy-Johnson', 'Sarah-Conner']</pre></code>  
+<p></p>          
+        </section>
+        <section class="blog-box">
+          <h3>What is Number()?</h3>
+          <p> This is not a method, but a constructor to work with values. It is used to coerce or turn other data types into a number. Usually it is used to turn string into numbers, but can also turn Boolean values into "0" or "1".
+          If it fails it returns (NaN)</p>
+          <p>In this example, we have an array full of numbers that are boxes of chocolates, but they were stored as string values. I want to know how many chocolates were sold, so I need the values as numbers.</p>
+
+          <pre><code>let stringNumbers = ['1', '5', '11', '55']
+
+function convertStringToNumArray(stringArray) {
+  let numArray = stringArray.map((num) => Number(num))
+  let sum = sumArray(numArray)
+  return sum
+}
+function sumArray(arr) {
+  return arr.reduce((a, b) => a+b);
+}
+
+console.log(convertStringToNumArray(stringNumbers))
+//Expected output: 72
+//Output without Number(): "151155"
+</code></pre><p></p>
+        </section>
+        
+      
+    </main>
+    <footer>
+
+    </footer>      
+  </body>
+</html>
