@@ -1,7 +1,7 @@
 :root{
   --sunset-yellow: rgba(255, 187, 0, 0.87);
-  --tech-blue: rgb(0 195 255 / 87%);
-  --core-green: rgb(0 255 80 / 87%);
+  --tech-blue: rgb(0 195 255 / 35%);
+  --core-green: rgb(0 255 80 / 35%);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -55,11 +55,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  width: 100%;
+  width: 100vw;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(31 31 31);
   margin: 0px;
-  padding-inline-start: 10px;
 }
 
 nav ul {
@@ -69,24 +68,24 @@ nav ul {
 
 nav a{
   color: rgb(255, 255, 255);
-  margin: auto;
+  /* margin: auto; */
   text-decoration: none;
 }
+
+nav a:hover{
+  text-decoration: underline;
+  background-color: none;
+}
+
 .nav-item{
   list-style-type: none;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  height: 100%;  
   color: white;
   border-color: rgba(0, 0, 0, 0.95);
   border-style: none;
-  border-right-style: solid;
-  border-width: 1px;
-  margin-right: 20px;
+  margin-block: 0px;
+  margin-inline: 20px;
   font-size: medium;
-}
-
-.nav-item:hover{
-  background-color: rgba(0, 0, 0, 0.642);
 }
 
 /* Nav Responsive Rules */
@@ -179,7 +178,7 @@ main{
 }
 
 .tech-blog-theme {
-  box-shadow: 0px 0px 20px 0.5px var(--tech-blue);
+  box-shadow: 0px 0px 12px 0.5px var(--tech-blue);
 }
 
 .core-blog-theme {
