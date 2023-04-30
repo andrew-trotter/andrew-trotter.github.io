@@ -145,6 +145,10 @@ li {
   margin-block-end: 0.5em;
 }
 
+p {
+  line-height: 1.25em;
+}
+
 /* Content */
 
 main{
