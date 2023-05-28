@@ -294,12 +294,13 @@ main{
 }
 
 .table td{
-  padding-inline: 10px;
-  
+  padding: 10px; 
+  border: 1px solid var(--sunset-yellow)
 }
 
 .table th {
   padding-block: 5px;
+  border: 1px solid var(--sunset-yellow)
 }
 
 table pre {
